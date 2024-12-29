@@ -33,7 +33,7 @@ export default {
     const formData = new URLSearchParams();
     formData.append('email', this.email);
     formData.append('password', this.password);
-    await axios.post('http://localhost:8000/register/', formData, {
+    await axios.post('https://backend-ledger.onrender.com/register/', formData, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },

@@ -40,7 +40,7 @@ export default {
     },
     async fetchQuestions() {
       try {
-        const response = await axios.get('http://localhost:8000/questions'); // Replace with your backend URL
+        const response = await axios.get('https://backend-ledger.onrender.com/questions'); // Replace with your backend URL
         this.questions = response.data; // Assumes the response structure matches your model
       } catch (error) {
         console.error('Error fetching questions:', error);
@@ -58,7 +58,7 @@ export default {
       }));
 
       // Send the transformed payload to the backend
-      axios.post('http://localhost:8000/check-answers', payload)
+      axios.post('https://backend-ledger.onrender.com/check-answers', payload)
         .then(response => {
           console.log('Answers checked successfully:', response.data);
           const results = response.data.results;
